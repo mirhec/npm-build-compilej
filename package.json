@@ -1,6 +1,6 @@
 {
   "name": "build-compilej",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Compile java files.",
   "main": "index.js",
   "bin": "./bin/build-compilej",
