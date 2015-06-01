@@ -18,5 +18,9 @@
     "glob": "^5.0.10"
   },
   "author": "Mirko Hecky",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirhec/npm-build-compilej.git"
+  }
 }
