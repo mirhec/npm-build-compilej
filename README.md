@@ -1,26 +1,34 @@
-# Build dependencies
-This is an extension to copy files from a dependency server (another directory in your file system) into your local project in order to build your project. This is usefull if you want to use npm as your [build tool](http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/), e.g. to build your Java applications.
+# Compile Java (for npm)
+This is an extension to compile all java files found in your src directory. The dependencies listed in your config section will be set as classpath. This is useful if you want to use npm as your [build tool](http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/), e.g. to build your Java applications.
 
 ## General usage
-In order to use this script, create the following config properties in your `package.json` file:
+If you have to specify some dependency jar files, do this in your `package.json` as follows:
 
 ```
 "config": {
-    "dependencies_base": "Y:/your/dependecy/server/location",
     "dependencies_dest": "lib/",
     "dependencies": [
       "some-dependency-3.4.5.jar"
     ]
 }
 ```
+For more information to this config settings visit [npm-build-dependencies](https://github.com/mirhec/npm-build-dependencies).
 
-Then the only thing you have to do is creating a scripts part in your `package.json` in order to collect the dependencies and add this extension into your dev-dependencies:
+Furthermore you can specify the output build directory as well as the source directory (these are the default options if you don't set any of these paths):
+```
+"config": {
+    "src": "src",
+    "bin": "bin"
+}
+```
+
+Then the only thing you have to do is creating a scripts part in your `package.json` in order to compile your Java files and add this extension into your dev-dependencies:
 
 ```
 "devDependencies": {
-    "build-dependencies": "^1.0.0"
+    "build-compilej": "latest"
 },
 "scripts": {
-    "dependencies": "build-dependencies"
+    "dependencies": "build-compilej"
   }
 ```
