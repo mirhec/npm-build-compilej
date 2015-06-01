@@ -1,0 +1,22 @@
+{
+  "name": "build-compilej",
+  "version": "1.0.5",
+  "description": "Compile java files.",
+  "main": "index.js",
+  "bin": "./bin/build-compilej",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "build",
+    "build tool",
+    "compile",
+    "java",
+    "javac"
+  ],
+  "dependencies": {
+    "glob": "^5.0.10"
+  },
+  "author": "Mirko Hecky",
+  "license": "ISC"
+}
