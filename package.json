@@ -2,10 +2,13 @@
   "name": "build-compilej",
   "version": "1.0.7",
   "description": "Compile java files.",
-  "main": "index.js",
+  "main": "lib/build-compilej.js",
   "bin": "./bin/build-compilej",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "npm run build",
+    "prepublish": "npm run build",
+    "build": "coffee --compile --output lib/ src/"
   },
   "keywords": [
     "build",
@@ -15,7 +18,8 @@
     "javac"
   ],
   "dependencies": {
-    "glob": "^5.0.10"
+    "glob": "^5.0.10",
+    "colors": "^1.1.0"
   },
   "author": "Mirko Hecky",
   "license": "ISC",
